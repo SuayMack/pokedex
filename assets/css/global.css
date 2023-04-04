@@ -1,0 +1,103 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 250;
+  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+}
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+}
+
+/*========== Button Dark/Light ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
+/*========== Base ==========*/
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem; 
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+}
+form {
+  width: 200px;
+  margin: 20px auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+}
+
+.img-container div {
+  padding: 0.5rem;
+}
